@@ -1,0 +1,190 @@
+.container {
+  padding: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+  height: 100%;
+  overflow-y: auto;
+  position: relative;
+}
+
+.title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 24px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: white;
+}
+
+.option:hover:not(.disabled) {
+  border-color: #2196f3;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.option.selected {
+  border-color: #2196f3;
+  background-color: #e3f2fd;
+}
+
+.option.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #f5f5f5;
+}
+
+.icon {
+  font-size: 2rem;
+  margin-right: 20px;
+  width: 40px;
+  text-align: center;
+}
+
+.info {
+  flex: 1;
+}
+
+.name {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0 0 4px 0;
+  color: #333;
+}
+
+.description {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.unavailable {
+  margin: 8px 0 0 0;
+  color: #d32f2f;
+  font-size: 0.85rem;
+}
+
+.checkmark {
+  color: #2196f3;
+  font-size: 1.5rem;
+  margin-left: 16px;
+}
+
+.warning {
+  margin-top: 24px;
+  padding: 16px;
+  background-color: #fff3e0;
+  border-radius: 8px;
+  border: 1px solid #ffe0b2;
+}
+
+.warning p {
+  margin: 0;
+  color: #e65100;
+  font-size: 0.9rem;
+}
+
+.error {
+  margin-bottom: 16px;
+  padding: 12px;
+  background-color: #ffebee;
+  border-radius: 4px;
+  color: #d32f2f;
+  font-size: 0.9rem;
+}
+
+.success {
+  margin-bottom: 16px;
+  padding: 12px;
+  background-color: #e8f5e9;
+  border-radius: 4px;
+  color: #2e7d32;
+  font-size: 0.9rem;
+}
+
+.loading {
+  text-align: center;
+  padding: 32px;
+  color: #666;
+}
+
+.status {
+  margin-bottom: 24px;
+  padding: 16px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.status p {
+  margin: 0 0 8px 0;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.status p:last-child {
+  margin-bottom: 0;
+}
+
+.backupActions {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.backupButton {
+  padding: 8px 16px;
+  background-color: white;
+  border: 1px solid #2196f3;
+  color: #2196f3;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.backupButton:hover {
+  background-color: #e3f2fd;
+}
+
+.migrationProgress {
+  margin: 24px 0;
+  padding: 16px;
+  background-color: #e3f2fd;
+  border-radius: 8px;
+  border: 1px solid #90caf9;
+}
+
+.progressStage {
+  margin-bottom: 12px;
+  color: #1976d2;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.progressBar {
+  height: 4px;
+  background-color: #bbdefb;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background-color: #2196f3;
+  transition: width 0.3s ease;
+} 
