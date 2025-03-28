@@ -2,39 +2,23 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>LocalNote Browser - Redirecting</title>
+  <title>LocalNote</title>
   <script type="text/javascript">
-    // Specifically detect and fix the src/main.tsx issue
-    var path = window.location.pathname;
-    if (path.includes('/src/') || path.includes('.tsx') || path.includes('.ts')) {
-      // Redirect to the main app if trying to access source files
-      window.location.href = '/LocalNote_Browser/';
-    } else {
-      // Regular SPA handling
-      var pathSegmentsToKeep = 1;
-      var l = window.location;
-      
-      // Preserve the original URL structure after base path
-      if (l.pathname.indexOf('/LocalNote_Browser/') === 0) {
-        // Already includes the base path, keep everything after it
-        l.replace(
-          l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-          '/LocalNote_Browser/#/' + l.pathname.replace('/LocalNote_Browser/', '') +
-          (l.search ? l.search : '')
-        );
-      } else {
-        // Doesn't include base path, handle normally
-        l.replace(
-          l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-          '/LocalNote_Browser/#/' + l.pathname.slice(1) +
-          (l.search ? l.search : '')
-        );
-      }
-    }
+    // Single Page Apps for GitHub Pages
+    // MIT License
+    // https://github.com/rafgraph/spa-github-pages
+    var pathSegmentsToKeep = 1;
+
+    var l = window.location;
+    l.replace(
+      l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+      l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+      l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+      (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+      l.hash
+    );
   </script>
 </head>
 <body>
-  <h2>Redirecting to LocalNote Browser app...</h2>
-  <p>If you are not redirected automatically, click <a href="https://g-intelligentearthian.github.io/LocalNote_Browser/">here</a>.</p>
 </body>
 </html> 

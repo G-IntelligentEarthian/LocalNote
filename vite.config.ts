@@ -7,6 +7,11 @@ export default defineConfig({
   base: '/LocalNote/',
   build: {
     outDir: 'dist',
-    sourcemap: true
+    sourcemap: true,
+    rollupOptions: {
+      output: {
+        manualChunks: undefined
+      }
+    }
   }
 })
