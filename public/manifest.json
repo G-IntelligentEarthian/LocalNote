@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "LocalNote Browser",
+  "version": "1.0.0",
+  "description": "A secure, privacy-focused note-taking application that keeps your data in your control.",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "LocalNote Browser",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+} 
